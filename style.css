@@ -1,10 +1,35 @@
 
+
+body {
+    background-color: #2d2424;
+}
 .tier-list {
-    margin-top: 2rem;
-    padding: 1rem;
+    margin: 4px 2px 1px 2px;
     border: 2px solid black;
-    border-radius: 30px;
+    border-radius: 20px; 
+    min-height: 100px;
+    width: 100%;
     display: flex;
+    gap: 10px; 
+    background-color: #f9f9f9; 
+}
+
+.tier-list > h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 98px;
+    margin: 0; /* Remove default margin */
+    flex-shrink: 0;
+    margin: 2px 1px 2px 5px;
+}
+.main-div{
+    display: flex;
+    
+}
+
+.main-div > div {
+    background-color: #1EAA4B;
 }
 
 form {
@@ -13,7 +38,7 @@ form {
     padding: 16px;
     border: 1px solid #ccc;
     border-radius: 8px; 
-    background-color: #f9f9f9;
+    background-color: #737674;
     width: 600px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -47,30 +72,57 @@ form > button {
     transition: background-color 0.3s;
 }
 
+#tier-list-section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
 .tier-list-item {
-    margin: 1rem;
-    padding: 1rem;
-
-
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0; 
+    background: #fff;  
+    border: 1px solid #ddd; 
+    flex: 1; 
+    margin-left: 5px;
+    flex-wrap: wrap;
+    width: 100%;  
+    border-left: 2px Solid;
+    border-radius: 0px 20px 20px 0px;
 }
 
 #non-tier-section{
     display: flex;
     width: 800px;
     flex-wrap: wrap;
-    height: 300px;
+    height: 250px;
+    overflow-y: auto;
+    background-color: #503152;
     border:1px solid #007bff;
+    margin-left: 2px;
+    /* position: absolute; */
+
 }
 
 .item-container {
-    width: 80px;
-    height: 80px;
-    margin: 3px;
-    padding: 3px;
+    margin: 2px 4px 2px 4px; 
+    /* width: 80px; */
+    height: 90px;
     gap: 3px;
+    flex: 0 0 90px;
+    text-align: center;
+    border: 1px solid #bbb;
+    border-radius: 5px;
 }
 
 .item-container > img {
+  display: block;
+  margin: 0; /* No margin for alignment */
+  border-radius: 5px;
     width: 100%;
     height: 100%;
     object-fit: cover;
