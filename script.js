@@ -8,12 +8,35 @@ const submitBtn1 = document.getElementById("submit1")
 // const itemContainers = document.getElementsByClassName("item-container");
 
 // const tierLists = document.querySelectorAll(".tier-list");
+const hexColors = [
+    "#ff7f7f", // Light Red
+    "#ffbf7f", // Light Orange
+    "#ffff7f", // Light Yellow
+    "#bfff7f", // Light Green
+    "#7fff7f", // Medium Green
+    "#7fffff", // Light Cyan
+    "#7fbfff", // Light Blue
+    "#7f7fff", // Medium Blue
+    "#bf7fff", // Light Purple
+    "#ff7fff", // Light Magenta
+    "#ff9f9f", // Soft Pinkish Red
+    "#ffaf7f", // Peach
+    "#ffdf7f", // Warm Yellow
+    "#afff7f", // Lime Green
+    "#7fffbf", // Mint Green
+    "#7fdfff", // Sky Blue
+    "#7f9fff", // Soft Indigo
+    "#af7fff", // Lavender
+    "#ff7faf", // Soft Pink
+    "#ff7fdf"  // Light Rose
+  ];
 
 submitBtn.addEventListener("click", (event) => {
     // console.log("button is clicked")
     event.preventDefault();
     // const target = event.target;
     createTierList(tierInput.value);
+
     tierInput.value = "";
 })
 
@@ -43,6 +66,10 @@ function createTierList(tierlistName){
 
     const tierSection = document.getElementById("tier-list-section");
     tierSection.appendChild(newTierList);
+
+    const randomColor = hexColors[Math.floor(Math.random() * hexColors.length)]
+
+    heading.style.backgroundColor = randomColor;
 
     setUpDropZoneInTierList(newtierlistItem);
 }

@@ -4,70 +4,93 @@ body {
     background-color: #2d2424;
 }
 .tier-list {
-    margin: 4px 2px 1px 2px;
-    border: 2px solid black;
-    border-radius: 20px; 
+    /* border: 2px solid black; */
     min-height: 100px;
     width: 100%;
     display: flex;
-    gap: 10px; 
-    background-color: #f9f9f9; 
 }
 
 .tier-list > h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 98px;
-    margin: 0; /* Remove default margin */
+    min-width: 120px;
+    margin: 2px;
+    font-size: 35px;
     flex-shrink: 0;
-    margin: 2px 1px 2px 5px;
 }
 .main-div{
     display: flex;
+    width: 100vw;
+    height: 38vh;
     
 }
 
 .main-div > div {
     background-color: #1EAA4B;
+    width: 35%;
+}
+
+.main-div > div > h1 {
+    height: 30%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    font-size: 53px;
+}
+
+
+#non-tier-section{
+    display: flex;
+    width: 64%;
+    flex-wrap: wrap;
+    height: 350px;
+    overflow-y: auto;
+    background-color: #503152;
+    border:1px solid #007bff;
+    margin-left: 2px;
+    /* position: absolute; */
 }
 
 form {
     display: flex;
     margin: 3px;
-    padding: 16px;
     border: 1px solid #ccc;
-    border-radius: 8px; 
     background-color: #737674;
-    width: 600px;
+    width: 99%;
+    height: 82px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 form > label {
-    font-size: 25px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    font-size: 37px;
     font-weight: bold;
-    color: #333;
-    margin-top: 7px;
     margin-right: 5px;
 }
 
 form > input {
-    width:100%;
-    padding: 8px;
+    width: 100%;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 15px;
+    font-size: 34px;
+}
+
+form > input::placeholder{
+    font-size: 20px;
 }
 
 form > button {
     background-color: #007bff;
     color: #fff;
     border: none;
-    margin-left: 2px;
     padding: 8px 16px;
     cursor: pointer;
     border-radius: 6px;
-    font-size: 14px;
+    font-size: 25px;
+    width: 170px;
     font-weight: bold;
     transition: background-color 0.3s;
 }
@@ -84,28 +107,11 @@ form > button {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 0; 
-    background: #fff;  
-    border: 1px solid #ddd; 
-    flex: 1; 
-    margin-left: 5px;
+    gap: 2px;
+    border: 3px solid #ddd;
+    flex: 1;
     flex-wrap: wrap;
-    width: 100%;  
-    border-left: 2px Solid;
-    border-radius: 0px 20px 20px 0px;
-}
-
-#non-tier-section{
-    display: flex;
-    width: 800px;
-    flex-wrap: wrap;
-    height: 250px;
-    overflow-y: auto;
-    background-color: #503152;
-    border:1px solid #007bff;
-    margin-left: 2px;
-    /* position: absolute; */
-
+    width: 100%;
 }
 
 .item-container {
