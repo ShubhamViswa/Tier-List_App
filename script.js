@@ -9,26 +9,10 @@ const submitBtn1 = document.getElementById("submit1")
 
 // const tierLists = document.querySelectorAll(".tier-list");
 const hexColors = [
-    "#ff7f7f", // Light Red
-    "#ffbf7f", // Light Orange
-    "#ffff7f", // Light Yellow
-    "#bfff7f", // Light Green
-    "#7fff7f", // Medium Green
-    "#7fffff", // Light Cyan
-    "#7fbfff", // Light Blue
-    "#7f7fff", // Medium Blue
-    "#bf7fff", // Light Purple
-    "#ff7fff", // Light Magenta
-    "#ff9f9f", // Soft Pinkish Red
-    "#ffaf7f", // Peach
-    "#ffdf7f", // Warm Yellow
-    "#afff7f", // Lime Green
-    "#7fffbf", // Mint Green
-    "#7fdfff", // Sky Blue
-    "#7f9fff", // Soft Indigo
-    "#af7fff", // Lavender
-    "#ff7faf", // Soft Pink
-    "#ff7fdf"  // Light Rose
+    "#ff7f7f", "#ffbf7f", "#ffff7f", "#bfff7f", "#7fff7f",
+    "#7fffff", "#7fbfff", "#7f7fff", "#bf7fff", "#ff7fff",
+    "#ff9f9f", "#ffaf7f", "#ffdf7f", "#afff7f", "#7fffbf",
+    "#7fdfff", "#7f9fff", "#af7fff", "#ff7faf", "#ff7fdf"
   ];
 
 submitBtn.addEventListener("click", (event) => {
@@ -72,6 +56,7 @@ function createTierList(tierlistName){
     heading.style.backgroundColor = randomColor;
 
     setUpDropZoneInTierList(newtierlistItem);
+
 }
 
 function createURLimage(itemURL){
@@ -102,7 +87,18 @@ for(const item of itemContainers){
 function setUpItemContainerForDrag(item){
     item.addEventListener("dragstart", (event) => {
         // console.log(event.target.parentNode);
+        // event.target.id = "draggedItem";
         currentDraggedItem = event.target.parentNode;
+    })
+
+    item.addEventListener("dblclick", (event) => {
+        // event.preventDefault();
+        // console.log("Shubham")
+        const parentNode = event.target.parentNode;
+        console.log(parentNode);
+
+        const nonTierSection = document.getElementById("non-tier-section");
+        nonTierSection.appendChild(parentNode);
     })
 }
 
@@ -112,7 +108,9 @@ function setUpDropZoneInTierList(tierList){
      })
 
      tierList.addEventListener("dragover", (event)=>{
-        console.log("dragged over a drop zone");
+        // event.preventDefault();
+        // console.log("dragged over a drop zone");
+        console.log(event.target.value);
         event.target.appendChild(currentDraggedItem);
      })
 }
