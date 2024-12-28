@@ -19,6 +19,10 @@ submitBtn.addEventListener("click", (event) => {
     // console.log("button is clicked")
     event.preventDefault();
     // const target = event.target;
+    if(tierInput.value === ""){
+        alert("Please Enter a valid image URL");
+        return;
+    }
     createTierList(tierInput.value);
 
     tierInput.value = "";
