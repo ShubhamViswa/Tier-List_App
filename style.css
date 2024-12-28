@@ -34,9 +34,9 @@ body {
 }
 
 .main-div > div > h1 {
-    height: 30%;
+    height: 8%;
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     justify-content: center;
     font-size: 53px;
     color: #bc6238;
@@ -81,7 +81,7 @@ form > label {
 form > input {
     width: 100%;
     border: 1px solid #ccc;
-    font-size: 34px;
+    font-size: 25px;
 }
 
 form > button {
