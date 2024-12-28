@@ -48,10 +48,12 @@ body {
     display: flex;
     width: 64%;
     flex-wrap: wrap;
-    height: 350px;
+    height: 100%;
     overflow-y: auto;
     background-color: #503152;
-    border:1px solid #007bff;
+    border-width: 1px 1px 0px 1px; 
+    border-color: #007bff;
+    border-style: solid ;
     margin-left: 2px;
     /* position: absolute; */
 }

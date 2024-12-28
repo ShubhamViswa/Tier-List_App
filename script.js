@@ -87,16 +87,12 @@ for(const item of itemContainers){
 function setUpItemContainerForDrag(item){
     item.addEventListener("dragstart", (event) => {
         // console.log(event.target.parentNode);
-        // event.target.id = "draggedItem";
         currentDraggedItem = event.target.parentNode;
     })
 
     item.addEventListener("dblclick", (event) => {
-        // event.preventDefault();
-        // console.log("Shubham")
+        event.preventDefault();
         const parentNode = event.target.parentNode;
-        console.log(parentNode);
-
         const nonTierSection = document.getElementById("non-tier-section");
         nonTierSection.appendChild(parentNode);
     })
@@ -108,9 +104,10 @@ function setUpDropZoneInTierList(tierList){
      })
 
      tierList.addEventListener("dragover", (event)=>{
-        // event.preventDefault();
+        event.preventDefault();
         // console.log("dragged over a drop zone");
-        console.log(event.target.value);
+        // console.log(event.target.value);
         event.target.appendChild(currentDraggedItem);
      })
+
 }
